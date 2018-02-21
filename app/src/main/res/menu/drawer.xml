@@ -1,10 +1,11 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- TODO: icons -->
+    <!-- TODO: make it a header instead -->
     <item
         android:id="@+id/nav_mass"
-        android:title="@string/nav_mass"
-        android:checkable="true" />
-    <!-- TODO: make it a header instead -->
+        android:checkable="true"
+        android:title="@string/nav_mass" />
     <item
         android:id="@+id/nav_information"
         android:title="@string/nav_informations"
@@ -40,6 +41,7 @@
                 android:id="@+id/nav_complies"
                 android:title="@string/nav_complies"
                 android:checkable="true" />
+
         </menu>
     </item>
     <item
