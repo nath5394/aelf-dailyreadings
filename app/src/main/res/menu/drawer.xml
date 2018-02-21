@@ -42,4 +42,8 @@
                 android:checkable="true" />
         </menu>
     </item>
+    <item
+        android:id="@+id/nav_bible"
+        android:title="@string/nav_bible"
+        android:checkable="true" />
 </menu>
