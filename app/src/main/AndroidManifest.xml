@@ -56,6 +56,12 @@
        			<category android:name="android.intent.category.DEFAULT" />
 		    </intent-filter>
         </activity>
+        <activity
+            android:name="co.epitre.aelf_lectures.BibleActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
         
         <!-- ContentProvider to store feed data.
 
