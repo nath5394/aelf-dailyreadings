@@ -483,18 +483,24 @@ public class LecturesActivity extends AppCompatActivity implements
         // Route menu item
         WHAT what = WHAT.fromMenuId(item.getItemId());
         if (what != null) {
-            SectionOfficesFragment sectionOfficeFragment;
-            try {
-                sectionOfficeFragment = (SectionOfficesFragment) sectionFragment;
-            } catch (ClassCastException e) {
-                sectionOfficeFragment = new SectionOfficesFragment();
-                setSection(sectionOfficeFragment);
+            if (what == WHAT.BIBLE) {
+                Intent BibleActivity = new Intent(LecturesActivity.this, co.epitre.aelf_lectures.BibleActivity.class);
+                startActivity(BibleActivity);
+            } else {
+                SectionOfficesFragment sectionOfficeFragment;
+                try {
+                    sectionOfficeFragment = (SectionOfficesFragment) sectionFragment;
+                } catch (ClassCastException e) {
+                    sectionOfficeFragment = new SectionOfficesFragment();
+                    setSection(sectionOfficeFragment);
+                }
+                return sectionOfficeFragment.loadLecture(what);
             }
-            return sectionOfficeFragment.loadLecture(what);
         } else {
             // This is something else :)
             return false; // Do not select item as we do not know what this is...
         }
+        return false; // NH: It seems to be necessary
     }
 
     @Override
