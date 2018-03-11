@@ -7,6 +7,10 @@ import android.view.MenuItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
 /**
  * Created by nathanael on 21/02/18.
@@ -14,12 +18,14 @@ import android.webkit.WebViewClient;
 
 public class BibleActivity extends Activity {
 
+    private Toolbar toolbar_bible;
     private WebView mWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bible);
+        toolbar_bible = findViewById(R.id.toolbar_bible);
 
         mWebView = (WebView) findViewById(R.id.activity_main_webview);
 
